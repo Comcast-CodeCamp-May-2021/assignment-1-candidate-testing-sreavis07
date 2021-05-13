@@ -41,8 +41,8 @@ console.log(`${i + 1}) ${questions[i]}\nYour Answer: ${candidateAnswers[i]}\nCor
   let grade;
   let numOfCorrectAns = 0;
   for (i = 0; i < questions.length; i++) {
-    if (String(candidateAnswers[i].toLowerCase()) === correctAnswers[i].toLowerCase()) {
-      numOfCorrectAns = i + 1;
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+      numOfCorrectAns += 1;
       // console.log(numOfCorrectAns);
       } grade = (numOfCorrectAns / questions.length) * 100;
   } console.log(`>>> Overall Grade: ${grade}% (${numOfCorrectAns} of 5 responses correct) <<<`);
